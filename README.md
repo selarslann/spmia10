@@ -1,3 +1,5 @@
+![example branch parameter](https://api.travis-ci.com/selarslann/spmia10.svg?token=wGUyLNvHywhpngi6zTT1&branch=master)
+
 # Introduction
 Welcome to Spring Microservices in Action, Chapter 10. Chapter 10 is the end of the book and demonstrates how to create a build and deployment pipeline.  We walkthrough how to build this pipeline and then deploy all of the services to Amazon's Elastic Container Service (ECS).
 
