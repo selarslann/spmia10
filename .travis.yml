@@ -28,6 +28,7 @@ before_install:
 - export BUILD_NAME=spmia10-$TRAVIS_BRANCH-$(date -u "+%Y%m%d%H%M%S")-$TRAVIS_BUILD_NUMBER
 - export CONTAINER_IP=54.215.193.139
 - export PLATFORM_TEST_NAME="spmia10-platform-tests"
+- update-alternatives --list java
 script:
 - sh travis_scripts/tag_build.sh
 - sh travis_scripts/build_services.sh
