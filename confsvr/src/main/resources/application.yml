@@ -26,7 +26,7 @@ spring:
 
 
 #####
-#Classpath and file-based solution
+# Classpath and file-based solution
 #####
 
 #server:
