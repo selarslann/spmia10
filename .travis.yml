@@ -21,14 +21,14 @@ env:
   - secure: PDJsxAxNGo5/dB3gq5M1NRFWgfAiSdg8wiNqY5J78IS8Ys0OOZXOQ5LiU3KvH9gWX7tNNuqJiroUrMEmo48WKIo5YsfXchwZkPCf76Rru3+Np1Y51KBJGyon8yxs6Zswm/uScf92+J+DfULRMBFaNp90XQKVjCdDNP5iUINcROKsO8tF8UqX5tuJqdaIHlNbVTaPg56hiK2tD7OzqvUEV/BFF5Y+co86N+6v9GQmeMDQldOKuPrWdG7glAqYRs1CimWGTotTDu8hF43Hz7hcUy82/mH3zk50AfGU5s2CFMYsSYU8yDOVIy3xaFLGwj3vDjqpFk7gx0IxAwXLIXMGmfHe4cesXlKDEWXm+Pf1fVI7gm1d3w0h/WQdTJIhW4rGsS6gxBTXHJe7vTWBEw++pPDPivsneAkFwvpfS56MhDFnWvAdVS+8AXzER+X9MypPDKmsPkuNhgIp8F/Etyht/sVP7qnS0lJX9aY3tTKkfvhXYGxnsmI1VclKO41uePys9NMz4ILBDsrSzFZkgSiNFNJjuO2Rf17GvAgfYhPfIM7PFE+hZo/CdwROoZjQJUnruuJ4s80F5pHHCrEmFma4OnEK9qBp8BAtg6Uy7mpc4CklTpxPLSW7K37wW1wUro6Slkz7hlPLPlcc2vGGBgzjYQRtQvCN5/NM0C5bjO9u5XI=
   - secure: id3yxru1wkGOWMFGafs0L1jeZY6M5nVWw0n//BMmCKcwOPVUZMd/VNZ3GvgxFPLc4e8LWQaK6qhTQGgb6u8zU1GOxb0iFXEo8DYAET3NWxbHMoNq2llA3edJpXfs9X9jGML4z0bYJFoyvV1KIN+afl6UBDltG0/h5QWcHI6ilFuh8lSEVvnJxyQ+eQnZeJkjk5qMOUz7mWDjPhnY6EZXmfq2JAKHWxFHqtwVgPfMRHI0K9ZKVWWVyV3gNmL1EqCBY4+fD1mplFbNRi2iKjad8CI2XoUj+L5jtiVWSp9O+v2cWYJ1lD9TLmZA3oJELrw4Tr4bIJ4pGf/cEwgnY9tVDJqraw6u9eaYIfr9c1aik8tiqnLNFeh/dWKuFzJUy0nuBfPyVgVWgMmpEUFMcJ/PHBJHlG6uFKU+zI0iunGi+S0+hqbm92BqZYavxHz8MO3+LpnnwoNC8BPd2BTxwaXczN1Qcp/5ocDW4m9PkHmaPiU9eG6mSVwZLAjbSaf6Bu51/YKuSPqzV7mAP7FoLk4zJTZAWr0XwXUUdeZrcP+/uV2oWAfbFdLcLCIBgks06j6oAMkWjiKLMRejvw/AyynuC5kqJzEsudee7oUVb7CrV6N42+FF17Bp+/IdLIlQFt61FhZrOe6OKVxiXCmwfnlcp5CyAi3UIWs5MxVK+Qr/RZM=
 before_install:
-- jdk_switcher use openjdk8
+- env
 - gem install travis -v 1.8.5 --no-document
 - sudo curl -k -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest
 - sudo chmod +x /usr/local/bin/ecs-cli
 - export BUILD_NAME=spmia10-$TRAVIS_BRANCH-$(date -u "+%Y%m%d%H%M%S")-$TRAVIS_BUILD_NUMBER
 - export CONTAINER_IP=54.215.193.139
 - export PLATFORM_TEST_NAME="spmia10-platform-tests"
-- update-alternatives --list java
+#- update-alternatives --list java
 #- export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 #- export PATH=$JAVA_HOME/bin:$PATH
 #- javac --version
